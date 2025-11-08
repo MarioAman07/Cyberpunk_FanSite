@@ -1,0 +1,192 @@
+/*
+ * File: style.css
+ * Description: Custom styles for the Cyberpunk theme.
+ * Requirements Covered: CSS3, Cyberpunk Design.
+ */
+
+/* === Global Theme Settings === */
+:root {
+    --color-background: #0D0D0D;
+    --color-primary-neon: #00FFFF; /* Cyan Neon */
+    --color-secondary-neon: #FF00FF; /* Magenta Neon */
+    --color-text: #F0F0F0;
+    --color-dark-bg: #1A1A1A;
+}
+
+body {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-family: 'Consolas', 'Courier New', monospace; /* Monospaced font for tech feel */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* === Typography & Headings === */
+h1, h2, h3, h4, .navbar-brand {
+    color: var(--color-primary-neon);
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* === Navigation & Header === */
+.main-header {
+    border-bottom: 2px solid var(--color-secondary-neon);
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.4);
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+    background-color: rgba(26, 26, 26, 0.95); /* Semi-transparent dark background */
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+}
+
+.nav-link {
+    color: var(--color-text) !important;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--color-primary-neon) !important;
+    text-shadow: 0 0 8px var(--color-primary-neon);
+    font-weight: bold;
+}
+
+/* === Buttons (Cyber Style) === */
+.btn-cyber {
+    background-color: var(--color-secondary-neon);
+    border: 2px solid var(--color-secondary-neon);
+    color: var(--color-background);
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 0 10px rgba(255, 0, 255, 0.7);
+    transition: all 0.3s;
+}
+
+.btn-cyber:hover {
+    background-color: var(--color-primary-neon);
+    border-color: var(--color-primary-neon);
+    color: var(--color-background);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.9);
+    transform: scale(1.05);
+}
+
+/* === Carousel (Hero Section) Styling === */
+.carousel-item img {
+    height: 60vh;
+    object-fit: cover;
+    filter: brightness(0.6) hue-rotate(200deg); /* Darker and blue-tinted */
+}
+
+/* === Character Card Custom Styling (Characters Page) === */
+.character-card {
+    background-color: var(--color-dark-bg);
+    border: 1px solid var(--color-primary-neon);
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+    overflow: hidden;
+    position: relative;
+    transition: all 0.4s;
+    cursor: pointer;
+}
+
+.character-card .card-title {
+    color: var(--color-text); /* FIX: Заголовки карточек теперь явно светлые */
+    text-shadow: 0 0 5px rgba(240, 240, 240, 0.5);
+}
+
+.character-card .card-text {
+    color: #E0E0E0; /* FIX: Текст описания теперь явно светлый */
+    font-size: 0.95rem; 
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    filter: grayscale(80%);
+    transition: filter 0.5s;
+}
+
+.character-card:hover .card-img-top {
+    filter: grayscale(0%);
+}
+
+/* FIX: Обеспечивает кликабельность кнопки */
+.card-button {
+    position: relative; 
+    z-index: 10; /* Кнопка выше оверлея */
+}
+
+/* === jQuery Hover Overlay (Requirement) === */
+.card-overlay {
+    position: absolute;
+    /* FIX: Сдвигаем оверлей вверх, оставляя 50px для кнопки */
+    bottom: 50px; 
+    left: 0;
+    right: 0;
+    background: rgba(255, 0, 255, 0.85); /* Magenta overlay for text */
+    color: var(--color-background);
+    padding: 15px;
+    display: none; 
+    text-align: center;
+    font-weight: bold;
+    z-index: 5; /* Оверлей ниже кнопки */
+}
+
+/* === Contact Form Styling === */
+.form-control, .form-control:focus {
+    background-color: #333;
+    border: 1px solid var(--color-secondary-neon);
+    color: var(--color-text);
+    box-shadow: none;
+}
+
+.form-control:focus {
+    border-color: var(--color-primary-neon);
+    box-shadow: 0 0 8px rgba(0, 255, 255, 0.5);
+}
+
+#form-message {
+    white-space: pre-wrap;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* ========================================= */
+/* === Modal Styling (Character Dossier) === */
+/* ========================================= */
+
+.modal-content {
+    background-color: var(--color-dark-bg);
+    border: 2px solid var(--color-primary-neon);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+    color: var(--color-text);
+}
+
+.modal-header {
+    border-bottom: 1px solid var(--color-secondary-neon);
+    color: var(--color-text);
+}
+
+.modal-body {
+    color: #E0E0E0;
+}
+
+.modal-footer {
+    border-top: 1px solid var(--color-dark-bg);
+}
+
+.btn-close {
+    background-color: transparent;
+    filter: invert(1) grayscale(100%) brightness(200%);
+    opacity: 0.8;
+}
+.btn-close:hover {
+    opacity: 1;
+}

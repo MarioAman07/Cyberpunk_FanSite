@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyberpunk Universe | Home Grid</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">NIGHT CITY ECHO</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNavbar">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="characters.html">Characters</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mt-5">
+
+        <h1 class="text-center mb-4">Welcome to the Cyber-Grid</h1>
+
+        <div id="cyberCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#cyberCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#cyberCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#cyberCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://picsum.photos/id/1018/1200/600" class="d-block w-100" alt="Neon Cityscape">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Night City: Where Dreams Die</h5>
+                        <p>Explore the vertical sprawl and dark secrets of the megalopolis.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://picsum.photos/id/1043/1200/600" class="d-block w-100" alt="Cyber-Mercenaries">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Augmented and Dangerous</h5>
+                        <p>Meet the chromed-up legends and the street scum of the 2077 world.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://picsum.photos/id/1050/1200/600" class="d-block w-100" alt="Netrunner Interface">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Dive into the Net</h5>
+                        <p>The matrix is calling. Are you ready to breach the firewalls?</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+        <div class="row text-center mt-5">
+            <div class="col-md-4 mb-4">
+                <h3 class="h4">__THE CORPS__</h3>
+                <p>The mega-corporations rule this world. Their power is absolute, their reach infinite. Stay off their radar.</p>
+                <a href="#" class="btn btn-sm btn-cyber">Read Dossier</a>
+            </div>
+            <div class="col-md-4 mb-4">
+                <h3 class="h4">__THE STREETS__</h3>
+                <p>Gangs, Edgerunners, Fixers. This is where the real action happens. Trust no one and keep your chrome clean.</p>
+                <a href="characters.html" class="btn btn-sm btn-cyber">Meet the Crew</a>
+            </div>
+            <div class="col-md-4 mb-4">
+                <h3 class="h4">__THE NET__</h3>
+                <p>A digital frontier of firewalls and data. Netrunners risk it all for forbidden knowledge and credits.</p>
+                <a href="contact.html" class="btn btn-sm btn-cyber">Hack Us</a>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="footer bg-dark text-white-50 mt-5 py-3">
+        <div class="container text-center">
+            <p>&copy; <span id="currentYear"></span> Night City Echo Fan Site. All rights reserved. // Aman Baku</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
