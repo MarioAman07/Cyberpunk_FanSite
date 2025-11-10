@@ -1,14 +1,7 @@
-/*
- * File: style.css
- * Description: Custom styles for the Cyberpunk theme.
- * Requirements Covered: CSS3, Cyberpunk Design.
- */
-
-/* === Global Theme Settings === */
 :root {
     --color-background: #0D0D0D;
-    --color-primary-neon: #00FFFF; /* Cyan Neon */
-    --color-secondary-neon: #FF00FF; /* Magenta Neon */
+    --color-primary-neon: #00FFFF;
+    --color-secondary-neon: #FF00FF;
     --color-text: #F0F0F0;
     --color-dark-bg: #1A1A1A;
 }
@@ -16,13 +9,12 @@
 body {
     background-color: var(--color-background);
     color: var(--color-text);
-    font-family: 'Consolas', 'Courier New', monospace; /* Monospaced font for tech feel */
+    font-family: 'Consolas', 'Courier New', monospace;
     line-height: 1.6;
     margin: 0;
     padding: 0;
 }
 
-/* === Typography & Headings === */
 h1, h2, h3, h4, .navbar-brand {
     color: var(--color-primary-neon);
     text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
@@ -30,14 +22,13 @@ h1, h2, h3, h4, .navbar-brand {
     text-transform: uppercase;
 }
 
-/* === Navigation & Header === */
 .main-header {
     border-bottom: 2px solid var(--color-secondary-neon);
     box-shadow: 0 0 15px rgba(255, 0, 255, 0.4);
     position: sticky;
     top: 0;
     z-index: 1020;
-    background-color: rgba(26, 26, 26, 0.95); /* Semi-transparent dark background */
+    background-color: rgba(26, 26, 26, 0.95);
 }
 
 .navbar-brand {
@@ -56,7 +47,6 @@ h1, h2, h3, h4, .navbar-brand {
     font-weight: bold;
 }
 
-/* === Buttons (Cyber Style) === */
 .btn-cyber {
     background-color: var(--color-secondary-neon);
     border: 2px solid var(--color-secondary-neon);
@@ -75,14 +65,12 @@ h1, h2, h3, h4, .navbar-brand {
     transform: scale(1.05);
 }
 
-/* === Carousel (Hero Section) Styling === */
 .carousel-item img {
     height: 60vh;
     object-fit: cover;
-    filter: brightness(0.6) hue-rotate(200deg); /* Darker and blue-tinted */
+    filter: brightness(0.6) hue-rotate(200deg);
 }
 
-/* === Character Card Custom Styling (Characters Page) === */
 .character-card {
     background-color: var(--color-dark-bg);
     border: 1px solid var(--color-primary-neon);
@@ -94,12 +82,12 @@ h1, h2, h3, h4, .navbar-brand {
 }
 
 .character-card .card-title {
-    color: var(--color-text); /* FIX: Заголовки карточек теперь явно светлые */
+    color: var(--color-text);
     text-shadow: 0 0 5px rgba(240, 240, 240, 0.5);
 }
 
 .character-card .card-text {
-    color: #E0E0E0; /* FIX: Текст описания теперь явно светлый */
+    color: #E0E0E0;
     font-size: 0.95rem; 
     line-height: 1.5;
     margin-bottom: 1rem;
@@ -117,29 +105,25 @@ h1, h2, h3, h4, .navbar-brand {
     filter: grayscale(0%);
 }
 
-/* FIX: Обеспечивает кликабельность кнопки */
 .card-button {
     position: relative; 
-    z-index: 10; /* Кнопка выше оверлея */
+    z-index: 10;
 }
 
-/* === jQuery Hover Overlay (Requirement) === */
 .card-overlay {
     position: absolute;
-    /* FIX: Сдвигаем оверлей вверх, оставляя 50px для кнопки */
     bottom: 50px; 
     left: 0;
     right: 0;
-    background: rgba(255, 0, 255, 0.85); /* Magenta overlay for text */
+    background: rgba(255, 0, 255, 0.85);
     color: var(--color-background);
     padding: 15px;
     display: none; 
     text-align: center;
     font-weight: bold;
-    z-index: 5; /* Оверлей ниже кнопки */
+    z-index: 5;
 }
 
-/* === Contact Form Styling === */
 .form-control, .form-control:focus {
     background-color: #333;
     border: 1px solid var(--color-secondary-neon);
@@ -158,9 +142,6 @@ h1, h2, h3, h4, .navbar-brand {
     margin-top: 15px;
 }
 
-/* ========================================= */
-/* === Modal Styling (Character Dossier) === */
-/* ========================================= */
 
 .modal-content {
     background-color: var(--color-dark-bg);
